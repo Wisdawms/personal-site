@@ -1,0 +1,235 @@
+:root {
+    --green: lightgreen;
+    --blue: rgb(79, 62, 226);
+    --white: rgb(204, 229, 253);
+    --bg: #212121;
+    --font: 'Source Code Pro';
+}
+
+footer {
+    padding: 16px;
+    text-shadow: 0 0 6px;
+    color: var(--green);
+    direction: rtl;
+    font-size: 1.25rem;
+}
+
+footer a {
+    display: inline;
+}
+
+footer::selection {
+    color: var(--white);
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+a {
+    color: var(--blue);
+    transition-property: color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+a:hover {
+    color: var(--green);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+}
+
+
+
+body {
+    background: url('wide_tamino.png'), linear-gradient(to bottom, lightslategrey, darkslategrey);
+    background-position: center initial;
+    background-blend-mode: multiply;
+    background-size: cover;
+    transition: 1s background ease;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 480px) {
+    body {
+        background-position: center center;
+
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        background-position: initial;
+    }
+
+}
+
+h1 {
+    color: var(--green);
+    letter-spacing: 5px;
+}
+
+h2 {
+    color: var(--white);
+}
+
+h3 {
+    color: var(--white);
+}
+
+body>div {
+    color: var(--green);
+
+    text-shadow: 0 0 6px;
+}
+
+a,
+li {
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes glow-flicker {
+    from {
+        color: transparent;
+        text-shadow: 0 0 0px orange, 0 0 px;
+    }
+
+    to {
+        color: var(--green);
+        text-shadow: 0 0 3px orange, 0 0 4px;
+    }
+}
+
+.cursor {
+    animation: blink 0.4s infinite alternate ease-in-out;
+}
+
+@keyframes blink {
+
+    from {
+        color: transparent;
+    }
+
+    to {
+        color: var(--white);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+nav {
+    width: 100% !important;
+}
+
+li,
+h1 {
+    transition: 0.3s color ease;
+}
+
+*::selection {
+    color: var(--green);
+}
+
+h3::selection,
+h2::selection {
+    color: var(--white);
+    background-color: var(--blue);
+}
+
+li:hover,
+h1:hover {
+    color: var(--blue);
+}
+
+h1::selection,
+li::selection {
+    color: var(--green);
+}
+
+nav {
+    width: 50%;
+}
+
+main>ul {
+    line-height: 3rem;
+}
+
+main>* {
+    padding: 12px;
+}
+
+
+.wb-body {
+    padding: 16px;
+    background-color: var(--bg);
+}
+
+.wb-body::-webkit-scrollbar {
+    display: none;
+}
+
+.wb-title {
+    font-family: var(--font);
+}
+
+.wb-header {
+    background-color: var(--green);
+    color: var(--bg);
+}
+
+.wb-header span {
+    filter: invert(19%) sepia(3%) saturate(103%) hue-rotate(62deg) brightness(40%) contrast(94%);
+}
+
+h2 {
+    margin-bottom: 12px;
+}
+
+#about-content p::selection,
+#contact-content p::selection {
+    color: var(--white) !important;
+}
+
+a {
+    width: fit-content;
+}
+
+#contact-content ul {
+    margin-top: 1rem;
+    line-height: 2rem;
+    font-size: 1.25rem;
+}
